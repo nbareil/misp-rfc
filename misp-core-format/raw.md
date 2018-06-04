@@ -676,7 +676,7 @@ A MISP document containing an Object **MUST** contain a name, a meta-category, a
    "comment": "",
    "deleted": false,
    "ObjectReference": [],
-   "Attribute": [
+   "Attribute": [{
                  "id": "7822",
                  "type": "filename",
                  "category": "Payload delivery",
@@ -693,7 +693,7 @@ A MISP document containing an Object **MUST** contain a name, a meta-category, a
                  "object_relation": "filename",
                  "value": "StarCraft.exe",
                  "ShadowAttribute": []
-                ]
+                }]
 }
 ~~~~~
 
