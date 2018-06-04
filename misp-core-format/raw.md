@@ -1261,6 +1261,12 @@ or parsing.
         "data": {
           "type": "string"
         },
+        "object_relation": {
+          "type": "null"
+        },
+        "object_id": {
+          "type": "string"
+        },
         "SharingGroup": {
           "$ref": "#/defs/sharing_group"
         },
@@ -1269,6 +1275,13 @@ or parsing.
           "uniqueItems": true,
           "items": {
             "$ref": "#/defs/attribute"
+          }
+        },
+        "Galaxy": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/defs/galaxy"
           }
         },
         "Tag": {
@@ -1295,6 +1308,9 @@ or parsing.
         },
         "date": {
           "type": "string"
+        },
+        "extends_uuid": {
+            "type": "string"
         },
         "threat_level_id": {
           "type": "string"
@@ -1381,6 +1397,13 @@ or parsing.
             "$ref": "#/defs/galaxy"
           }
         },
+        "Object": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                "$ref": "#/defs/attribute"
+            }
+        },
         "Tag": {
           "type": "array",
           "uniqueItems": true,
@@ -1408,6 +1431,9 @@ or parsing.
         },
         "hide_tag": {
           "type": "boolean"
+        },
+        "user_id": {
+          "type": "string"
         }
       }
     },
@@ -1496,6 +1522,7 @@ or parsing.
     "Event"
   ]
 }
+
 ~~~~
 
 # Manifest
