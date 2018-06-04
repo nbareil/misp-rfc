@@ -1215,6 +1215,64 @@ or parsing.
         }
       }
     },
+    "object": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "uuid": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "event_id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "template_uuid": {
+          "type": "string"
+        },
+        "template_version": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "meta-category": {
+          "type": "string"
+        },
+        "deleted": {
+          "type": "boolean"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "distribution": {
+          "type": "string"
+        },
+        "sharing_group_id": {
+          "type": "string"
+        },
+        "comment": {
+          "type": "string"
+        },
+        "ObjectReference": {
+            "type": "array",
+            "items": {
+              "type": null
+            }
+        },
+
+        "Attribute": {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/attribute"
+          }
+        }
+      }
+    },
     "attribute": {
       "type": "object",
       "additionalProperties": false,
@@ -1261,6 +1319,12 @@ or parsing.
         "data": {
           "type": "string"
         },
+        "object_relation": {
+          "type": ["string", "null"]
+        },
+        "object_id": {
+          "type": "string"
+        },
         "SharingGroup": {
           "$ref": "#/defs/sharing_group"
         },
@@ -1269,6 +1333,13 @@ or parsing.
           "uniqueItems": true,
           "items": {
             "$ref": "#/defs/attribute"
+          }
+        },
+        "Galaxy": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/defs/galaxy"
           }
         },
         "Tag": {
@@ -1295,6 +1366,9 @@ or parsing.
         },
         "date": {
           "type": "string"
+        },
+        "extends_uuid": {
+            "type": "string"
         },
         "threat_level_id": {
           "type": "string"
@@ -1381,6 +1455,13 @@ or parsing.
             "$ref": "#/defs/galaxy"
           }
         },
+        "Object": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                "$ref": "#/defs/object"
+            }
+        },
         "Tag": {
           "type": "array",
           "uniqueItems": true,
@@ -1408,6 +1489,9 @@ or parsing.
         },
         "hide_tag": {
           "type": "boolean"
+        },
+        "user_id": {
+          "type": "string"
         }
       }
     },
@@ -1431,6 +1515,12 @@ or parsing.
           "type": "string"
         },
         "version": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "namespace": {
           "type": "string"
         },
         "GalaxyCluster": {
@@ -1465,6 +1555,9 @@ or parsing.
           "type": "string"
         },
         "galaxy_id": {
+          "type": "string"
+        },
+        "version": {
           "type": "string"
         },
         "source": {
